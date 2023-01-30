@@ -1,6 +1,8 @@
 class BigBang {
   Parse(number: number) {
-    return 1;
+    if(number === 5)
+      return 'big';
+    return number.toString();
   }
 }
 
