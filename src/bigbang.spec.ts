@@ -13,4 +13,13 @@ describe('BigBang', () => {
   test('should return big', () => {
     expect(BigBang.Parse(5)).toBe('big');
   });
+  test('should return bang', () => {
+    expect(BigBang.Parse(7)).toBe('bang');
+  });
+  test('should return big', () => {
+    expect(BigBang.Parse(15)).toBe('big');
+  });
+  test('should return bang', () => {
+    expect(BigBang.Parse(21)).toBe('bang');
+  });
 });
