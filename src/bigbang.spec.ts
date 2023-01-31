@@ -1,6 +1,6 @@
 import bigbang from './bigbang';
 
-describe('BigBanf', () => {
+describe('BigBang', () => {
   test('should return 1 for 1', () => {
     expect(bigbang.Parse(1)).toBe("1");
   });
@@ -30,5 +30,17 @@ describe('BigBanf', () => {
   });
   test('should return bigbang for 105', () => {
     expect(bigbang.Parse(105)).toBe("bigbang");
+  });
+  test('should return bangbig for 70', () => {
+    expect(bigbang.Parse(70)).toBe("bangbig");
+  });
+  test('should return bangbig for 280', () => {
+    expect(bigbang.Parse(280)).toBe("bangbig");
+  });
+  test('should return bangbig for 7000', () => {
+    expect(bigbang.Parse(7000)).toBe("bangbig");
+  });
+  test('should return 234411 for 7000', () => {
+    expect(bigbang.Parse(234411)).toBe("234411");
   });
 });
