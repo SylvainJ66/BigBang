@@ -1,5 +1,6 @@
 class BigBang {
   parse(number: number) {
+    if (number % (5 * 7 * 11) === 0) return 'bigbangboom';
     if (number % (5 * 11 * 2) === 0) return 'boombig';
     if (number % (5 * 11) === 0) return 'bigboom';
     if (number % (5 * 7 * 2) === 0) return 'bangbig';

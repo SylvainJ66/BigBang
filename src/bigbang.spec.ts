@@ -61,4 +61,10 @@ describe('BigBang', () => {
   test('should parse 220 to "boombig"', () => {
     expect(bigbang.parse(220)).toBe('boombig');
   });
+  test('should parse 385 () to "bigbangboom"', () => {
+    expect(bigbang.parse(385)).toBe('bigbangboom');
+  });
+  test('should parse 1155 to "bigbangboom"', () => {
+    expect(bigbang.parse(1155)).toBe('bigbangboom');
+  });
 });
