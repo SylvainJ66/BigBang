@@ -1,6 +1,6 @@
 class BigBang {
   parse(number: number) {
-    return undefined;
+    return '1';
   }
 }
 
