@@ -25,4 +25,7 @@ describe('BigBang', () => {
   test('should parse 14 to "bang"', () => {
     expect(bigbang.parse(14)).toBe('bang');
   });
+  test('should parse 21 to "bang"', () => {
+    expect(bigbang.parse(21)).toBe('bang');
+  });
 });
