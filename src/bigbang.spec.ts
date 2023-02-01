@@ -10,4 +10,7 @@ describe('BigBang', () => {
   test('should parse 3 to "3"', () => {
     expect(bigbang.parse(3)).toBe('3');
   });
+  test('should parse 5 to "big"', () => {
+    expect(bigbang.parse(5)).toBe('big');
+  });
 });
