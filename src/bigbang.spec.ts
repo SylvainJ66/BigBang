@@ -16,5 +16,13 @@ describe('BigBang', () => {
   test('should parse 10 to "big"', () => {
     expect(bigbang.parse(10)).toBe('big');
   });
-
+  test('should parse 15 to "big"', () => {
+    expect(bigbang.parse(15)).toBe('big');
+  });
+  test('should parse 7 to "bang"', () => {
+    expect(bigbang.parse(7)).toBe('bang');
+  });
+  test('should parse 14 to "bang"', () => {
+    expect(bigbang.parse(14)).toBe('bang');
+  });
 });
