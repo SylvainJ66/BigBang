@@ -1,6 +1,6 @@
 class BigBang {
   parse(number: number) {
-    return '1';
+    return number.toString();
   }
 }
 
