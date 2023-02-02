@@ -1,6 +1,6 @@
 class BigBang {
 
-  private _specialNumbers: Map<number, string>;
+  private readonly _specialNumbers: Map<number, string>;
 
   constructor() {
     this._specialNumbers = new Map<number, string>();
@@ -27,12 +27,13 @@ class BigBang {
   }
 
   private isReversible(number: number): boolean {
-    return (
-      (this.multipleOf(number, 5) ||
-        this.multipleOf(number, 7) ||
-        this.multipleOf(number, 11)) &&
-      this.multipleOf(number, 2)
-    );
+    let isTransformed = false;
+    for (const key of Array.from(this._specialNumbers.keys())) {
+      if(this.multipleOf(number, key)){
+        isTransformed = true;
+      }
+    }
+    return isTransformed && this.multipleOf(number, 2);
   }
 
   get specialNumbers(): Map<number, string> {
