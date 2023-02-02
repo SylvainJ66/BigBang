@@ -1,13 +1,20 @@
 class BigBang {
+
+  private _specialNumbers: Map<number, string>;
+
+  constructor() {
+    this._specialNumbers = new Map<number, string>();
+    this._specialNumbers.set(5, 'big');
+    this._specialNumbers.set(7, 'bang');
+    this._specialNumbers.set(11, 'boom');
+  }
+
   parse(number: number) {
-    const specialNumbers = new Map<number, string>();
-    specialNumbers.set(5, 'big');
-    specialNumbers.set(7, 'bang');
-    specialNumbers.set(11, 'boom');
     let result: string[] = [];
 
-    for (const key of Array.from(specialNumbers.keys())) {
-      if (this.multipleOf(number, key)) result.push(specialNumbers.get(key)!);
+    for (const key of Array.from(this._specialNumbers.keys())) {
+      if (this.multipleOf(number, key))
+        result.push(this._specialNumbers.get(key)!);
     }
 
     if (this.isReversible(number)) result = result.reverse();
@@ -26,6 +33,14 @@ class BigBang {
         this.multipleOf(number, 11)) &&
       this.multipleOf(number, 2)
     );
+  }
+
+  get specialNumbers(): Map<number, string> {
+    return this._specialNumbers;
+  }
+
+  set specialNumbers(value: Map<number, string>) {
+    this._specialNumbers = value;
   }
 }
 
