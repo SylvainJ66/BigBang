@@ -1,12 +1,14 @@
 class BigBang {
   parse(number: number) {
-    const specialNumbers: number[] = [5, 7, 11];
+    const specialNumbers = new Map<number, string>();
+    specialNumbers.set(5, 'big');
+    specialNumbers.set(7, 'bang');
+    specialNumbers.set(11, 'boom');
     let result: string[] = [];
 
-    specialNumbers.forEach((item) => {
-      if (this.multipleOf(number, item))
-        result.push(this.getRelatedString(item));
-    });
+    for (const key of Array.from(specialNumbers.keys())) {
+      if (this.multipleOf(number, key)) result.push(this.getRelatedString(key));
+    }
 
     if (this.isReversible(number)) result = result.reverse();
 
