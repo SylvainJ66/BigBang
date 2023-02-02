@@ -8,8 +8,7 @@ class BigBang {
         result.push(this.getRelatedString(specialNumbers[i]));
     }
 
-    if (this.multipleOf(number, 5 * 7 * 2)) result = result.reverse();
-    if (this.multipleOf(number, 5 * 11 * 2)) result = result.reverse();
+    if (this.isReversible(number)) result = result.reverse();
 
     return result.length === 0 ? number.toString() : result.join('');
   }
@@ -23,6 +22,15 @@ class BigBang {
 
   private multipleOf(number: number, multiple: number) {
     return number % multiple === 0;
+  }
+
+  private isReversible(number: number): boolean {
+    return (
+      (this.multipleOf(number, 5) ||
+        this.multipleOf(number, 7) ||
+        this.multipleOf(number, 11)) &&
+      this.multipleOf(number, 2)
+    );
   }
 }
 
