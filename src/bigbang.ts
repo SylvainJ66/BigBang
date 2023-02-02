@@ -7,7 +7,7 @@ class BigBang {
     let result: string[] = [];
 
     for (const key of Array.from(specialNumbers.keys())) {
-      if (this.multipleOf(number, key)) result.push(this.getRelatedString(key));
+      if (this.multipleOf(number, key)) result.push(specialNumbers.get(key)!);
     }
 
     if (this.isReversible(number)) result = result.reverse();
