@@ -15,13 +15,6 @@ class BigBang {
     return result.length === 0 ? number.toString() : result.join('');
   }
 
-  private getRelatedString(number: number) {
-    if (number === 5) return 'big';
-    if (number === 7) return 'bang';
-    if (number === 11) return 'boom';
-    return '';
-  }
-
   private multipleOf(number: number, multiple: number) {
     return number % multiple === 0;
   }
