@@ -38,6 +38,6 @@ describe('BigBang', () => {
     expect(bigbang.parse(105)).toBe('bigbang');
   });
   test('should parse 5*7*2 to "bangbig"', () => {
-    expect(bigbang.parse(105)).toBe('bangbig');
+    expect(bigbang.parse(70)).toBe('bangbig');
   });
 });
