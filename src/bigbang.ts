@@ -2,12 +2,12 @@ class BigBang {
   parse(number: number) {
     const specialNumbers: number[] = [5, 7, 11];
     let result = number.toString();
-    if (this.multipleOf(number, specialNumbers[0]))
-      result = this.getRelatedString(specialNumbers[0]);
-    if (this.multipleOf(number, specialNumbers[1]))
-      result = this.getRelatedString(specialNumbers[1]);
-    if (this.multipleOf(number, specialNumbers[2]))
-      result = this.getRelatedString(specialNumbers[2]);
+
+    for (let i = 0; i < 3; i++) {
+      if (this.multipleOf(number, specialNumbers[i]))
+        result = this.getRelatedString(specialNumbers[i]);
+    }
+
     if (this.multipleOf(number, 5 * 7))
       result = this.getRelatedString(5) + this.getRelatedString(7);
     if (this.multipleOf(number, 5 * 7 * 2))
