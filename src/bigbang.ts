@@ -5,11 +5,10 @@ class BigBang {
 
     for (let i = 0; i < 3; i++) {
       if (this.multipleOf(number, specialNumbers[i]))
-        result = this.getRelatedString(specialNumbers[i]);
+        result += this.getRelatedString(specialNumbers[i]);
     }
 
-    if (this.multipleOf(number, 5 * 7))
-      result = this.getRelatedString(5) + this.getRelatedString(7);
+
     if (this.multipleOf(number, 5 * 7 * 2))
       result = this.getRelatedString(7) + this.getRelatedString(5);
     return result;
