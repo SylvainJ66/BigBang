@@ -11,14 +11,11 @@ class BigBang {
 
   parse(number: number) {
     let result: string[] = [];
-
     for (const key of Array.from(this._specialNumbers.keys())) {
       if (this.multipleOf(number, key))
         result.push(this._specialNumbers.get(key)!);
     }
-
     if (this.isReversible(number)) result = result.reverse();
-
     return result.length === 0 ? number.toString() : result.join('');
   }
 
@@ -29,7 +26,7 @@ class BigBang {
   private isReversible(number: number): boolean {
     let isTransformed = false;
     for (const key of Array.from(this._specialNumbers.keys())) {
-      if(this.multipleOf(number, key)){
+      if (this.multipleOf(number, key)){
         isTransformed = true;
       }
     }
