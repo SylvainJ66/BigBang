@@ -38,10 +38,6 @@ class BigBang {
   get specialNumbers(): Map<number, string> {
     return this._specialNumbers;
   }
-
-  set specialNumbers(value: Map<number, string>) {
-    this._specialNumbers = value;
-  }
 }
 
 export default new BigBang();
