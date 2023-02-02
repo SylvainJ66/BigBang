@@ -1,12 +1,11 @@
 class BigBang {
   parse(number: number) {
-    let result = '';
+    let result = number.toString();
     if (this.multipleOf(number, 5 * 7 * 2)) result = 'bangbig';
     if (this.multipleOf(number, 5 * 7)) result = 'bigbang';
     if (this.multipleOf(number, 11)) result = 'boom';
     if (this.multipleOf(number, 7)) result = 'bang';
     if (this.multipleOf(number, 5)) result = 'big';
-    result = number.toString();
     return result;
   }
 
