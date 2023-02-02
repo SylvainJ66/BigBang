@@ -3,10 +3,10 @@ class BigBang {
     const specialNumbers: number[] = [5, 7, 11];
     let result: string[] = [];
 
-    for (let i = 0; i < 3; i++) {
-      if (this.multipleOf(number, specialNumbers[i]))
-        result.push(this.getRelatedString(specialNumbers[i]));
-    }
+    specialNumbers.forEach((item) => {
+      if (this.multipleOf(number, item))
+        result.push(this.getRelatedString(item));
+    });
 
     if (this.isReversible(number)) result = result.reverse();
 
