@@ -9,6 +9,7 @@ class BigBang {
     }
 
     if (this.multipleOf(number, 5 * 7 * 2)) result = result.reverse();
+    if (this.multipleOf(number, 5 * 11 * 2)) result = result.reverse();
 
     return result.length === 0 ? number.toString() : result.join('');
   }
