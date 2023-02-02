@@ -1,16 +1,16 @@
 class BigBang {
   parse(number: number) {
     const specialNumbers: number[] = [5, 7, 11];
-    let result = '';
+    let result: string[] = [];
 
     for (let i = 0; i < 3; i++) {
       if (this.multipleOf(number, specialNumbers[i]))
-        result += this.getRelatedString(specialNumbers[i]);
+        result.push(this.getRelatedString(specialNumbers[i]));
     }
 
-    if (this.multipleOf(number, 5 * 7 * 2))
-      result = this.getRelatedString(7) + this.getRelatedString(5);
-    return result === '' ? number.toString() : result;
+    if (this.multipleOf(number, 5 * 7 * 2)) result = result.reverse();
+
+    return result.length === 0 ? number.toString() : result.join('');
   }
 
   private getRelatedString(number: number) {
