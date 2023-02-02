@@ -1,7 +1,9 @@
 class BigBang {
   parse(number: number) {
+    const specialNumbers: number[] = [5, 7, 11];
     let result = number.toString();
-    if (this.multipleOf(number, 5)) result = this.getRelatedString(5);
+    if (this.multipleOf(number, specialNumbers[0]))
+      result = this.getRelatedString(specialNumbers[0]);
     if (this.multipleOf(number, 7)) result = this.getRelatedString(7);
     if (this.multipleOf(number, 11)) result = this.getRelatedString(11);
     if (this.multipleOf(number, 5 * 7))
