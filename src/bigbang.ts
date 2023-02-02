@@ -4,7 +4,7 @@ class BigBang {
     if (this.multipleOf(number, 5)) result = this.getRelatedString(5);
     if (this.multipleOf(number, 7)) result = 'bang';
     if (this.multipleOf(number, 11)) result = 'boom';
-    if (this.multipleOf(number, 5 * 7)) result = 'bigbang';
+    if (this.multipleOf(number, 5 * 7)) result = this.getRelatedString(5) + this.getRelatedString(7);
     if (this.multipleOf(number, 5 * 7 * 2)) result = 'bangbig';
     return result;
   }
