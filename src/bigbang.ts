@@ -27,10 +27,10 @@ class BigBang {
   }
 
   private isReversible(number: number): boolean {
-    const isTransformed = Array.from(this._specialNumbers.keys()).some((n) =>
-      this.multipleOf(number, n),
-    );
-    return isTransformed && this.multipleOf(number, 2);
+    const isTransformedIntoAString = Array.from(
+      this._specialNumbers.keys(),
+    ).some((n) => this.multipleOf(number, n));
+    return isTransformedIntoAString && this.multipleOf(number, 2);
   }
 
   get specialNumbers(): Map<number, string> {
