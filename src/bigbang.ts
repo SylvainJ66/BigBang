@@ -10,12 +10,16 @@ class BigBang {
 
   parse(number: number) {
     let result: string[] = [];
-    for (const key of Array.from(this._specialNumbers.keys())) {
-      if (this.multipleOf(number, key))
-        result.push(this._specialNumbers.get(key)!);
-    }
+    this.buildResponseArray(number, result);
     if (this.isReversible(number)) result = result.reverse();
     return result.length === 0 ? number.toString() : result.join('');
+  }
+
+  private buildResponseArray(number: number, result: string[]) {
+    for (const specialNumber of Array.from(this._specialNumbers.keys())) {
+      if (this.multipleOf(number, specialNumber))
+        result.push(this._specialNumbers.get(specialNumber)!);
+    }
   }
 
   private multipleOf(number: number, multiple: number) {
